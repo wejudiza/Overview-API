@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const router = require('./router.js');
 
 const server = express();
-const port = 5432;
+const port = 8080;
 
 server.use(morgan('dev'));
 server.use(bodyParser.json());

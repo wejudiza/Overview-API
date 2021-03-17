@@ -16,3 +16,5 @@ router
 router
   .route('/:product_id/related')
   .get(controller.getRelatedProducts)
+
+  module.exports = router;

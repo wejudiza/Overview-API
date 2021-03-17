@@ -1,11 +1,11 @@
-const postgresql = require('postgresql');
+const Pool = require('pg').Pool;
 
-var connection = postgresql.createConnection({
-  user: 'root',
+const pool = new Pool({
+  user: 'postgres',
   password: '',
-  database: 'atelier-products'
+  database: 'atelier-products',
+  host: 'localhost',
+  port: 5432
 });
 
-connection.connect();
-
-module.exports = connection;
+module.exports = pool;

@@ -10,9 +10,9 @@ const controller = {
   },
   // to retrieve product info for specific product id
   getProductInfo: (req, res) => {
-    db.getProductId(req, (err, results) => {
+    db.getProductInfo(req.params.product_id, (err, results) => {
       if (err) res.status(400).send(err);
-      else res.status(200).send(results);
+      else res.status(200).send(results.rows[0]);
     });
   },
   // to retrieve all styles of current product

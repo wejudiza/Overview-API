@@ -1,0 +1,23 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "author": "Justine David",
+  "description": "back-end for Products for Project-Atelier",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "build": "webpack -d --watch"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "postgresql": "^0.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.26.2",
+    "webpack-cli": "^4.5.0"
+  }
+}

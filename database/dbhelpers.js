@@ -22,7 +22,7 @@ module.exports = {
             'name', s.name,
             'original_price', s.original_price,
             'sale_price', s.sale_price,
-            'default_style', s.default_style,
+            'default?', s.default_style,
             'photos', photos,
             'skus', skus
         )
@@ -52,7 +52,7 @@ module.exports = {
       FROM photos p
       GROUP BY p.style_id
     ) p ON (s.style_id = p.style_id)
-    where s.product_id=${id}
+    where s.product_id='${id}'
     GROUP BY s.product_id;`;
     pool.query(queryStr, (err, results) => {
       callback(err, results);

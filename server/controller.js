@@ -17,9 +17,9 @@ const controller = {
   },
   // to retrieve all styles of current product
   getStyles: (req, res) => {
-    db.getProductStyles(req, (err, results) => {
+    db.getStyles(req.params.product_id, (err, results) => {
       if (err) res.status(400).send(err);
-      else res.status(200).send(results);
+      else res.status(200).send(results.rows[0]);
     });
   },
   // to retrieve related products of current product

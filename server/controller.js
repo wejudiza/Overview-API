@@ -24,9 +24,9 @@ const controller = {
   },
   // to retrieve related products of current product
   getRelatedProducts: (req, res) => {
-    db.getRelatedProducts(req, (err, results) => {
+    db.getRelatedProducts(req.params.product_id, (err, results) => {
       if (err) res.status(400).send(err);
-      else res.status(200).send(results);
+      else res.status(200).send(results.rows[0].json_agg);
     });
   }
 }

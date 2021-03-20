@@ -7,7 +7,7 @@ module.exports = {
     })
   },
   getProductInfo: (id, callback) => {
-    var queryStr = `SELECT i.id, i.name, i.slogan, i.description, i.category, i.default_price, json_agg(json_build_object('feature', f.feature, 'value', f.value)) AS features FROM info i INNER JOIN features f ON (i.id = f.product_id) WHERE i.id=${id} GROUP BY i.id;`;
+    var queryStr = `SELECT i.id, i.name, i.slogan, i.description, i.category, i.default_price, json_agg(json_build_object('feature', f.feature, 'value', f.value)) AS features FROM info i LEFT JOIN features f ON (i.id = f.product_id) WHERE i.id=${id} GROUP BY i.id;`;
     pool.query(queryStr, (err, results) => {
       callback(err, results);
     })
@@ -28,7 +28,7 @@ module.exports = {
         )
       ) results
     FROM styles s
-    INNER JOIN (
+    LEFT JOIN (
       SELECT
         skus.style_id,
         json_object_agg(skus.id,
@@ -40,7 +40,7 @@ module.exports = {
       FROM skus
       GROUP BY skus.style_id
     ) skus ON (s.style_id = skus.style_id)
-    INNER JOIN (
+    LEFT JOIN (
       SELECT
         p.style_id,
         json_agg(

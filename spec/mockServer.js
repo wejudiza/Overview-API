@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const router = require('./server/router.js');
+const router = require('../server/router.js');
 
 const server = express();
 const port = 8080;

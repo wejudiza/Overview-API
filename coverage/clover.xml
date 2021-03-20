@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1616208599075" clover="3.2.0">
-  <project timestamp="1616208599075" name="All files">
+<coverage generated="1616208845025" clover="3.2.0">
+  <project timestamp="1616208845025" name="All files">
     <metrics statements="50" coveredstatements="50" conditionals="8" coveredconditionals="4" methods="16" coveredmethods="16" elements="74" coveredelements="70" complexity="0" loc="50" ncloc="50" packages="3" files="5" classes="5"/>
-    <package name="Products-API">
-      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="mockServer.js" path="/Users/justinedavid/Documents/HR-LAX42/SDC/Products-API/mockServer.js">
-        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="Products-API.database">
+    <package name="database">
       <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <file name="dbhelpers.js" path="/Users/justinedavid/Documents/HR-LAX42/SDC/Products-API/database/dbhelpers.js">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
@@ -45,7 +26,7 @@
         <line num="11" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="Products-API.server">
+    <package name="server">
       <metrics statements="22" coveredstatements="22" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="8"/>
       <file name="controller.js" path="/Users/justinedavid/Documents/HR-LAX42/SDC/Products-API/server/controller.js">
         <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="8"/>
@@ -74,6 +55,25 @@
         <line num="12" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="spec">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="mockServer.js" path="/Users/justinedavid/Documents/HR-LAX42/SDC/Products-API/spec/mockServer.js">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
       </file>
     </package>
   </project>

@@ -2,7 +2,7 @@ const pool = require('./');
 
 module.exports = {
   getAllProducts: (callback) => {
-    pool.query('SELECT * FROM info', (err, results) => {
+    pool.query('SELECT * FROM info LIMIT 5', (err, results) => {
       callback(err, results);
     })
   },

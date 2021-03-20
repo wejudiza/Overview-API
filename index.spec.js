@@ -2,6 +2,15 @@ const server = require('./mockServer.js');
 const supertest = require('supertest');
 const request = supertest(server);
 
+it('test getAllProducts route', async done => {
+  const res = await request
+    .get('/products/')
+  expect(res.status).toBe(200);
+  expect(res.body[2].id).toBe(3);
+  expect(res.body.length).toBe(5);
+  done()
+});
+
 it('test getProductInfo route', async done => {
   const res = await request
     .get('/products/1')

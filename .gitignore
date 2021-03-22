@@ -4,3 +4,11 @@ bundle.js
 #config
 config.js
 node_modules
+newrelic.js
+newrelic_agent.log
+
+#pem key
+products-API.pem
+
+#ubuntu login
+login.sh

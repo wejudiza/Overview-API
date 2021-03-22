@@ -2,19 +2,19 @@ const router = require('express').Router();
 const controller = require('./controller');
 
 router
-  .route('/')
+  .route('/products/')
   .get(controller.getAllProducts)
 
 router
-  .route('/:product_id')
+  .route('/products/:product_id')
   .get(controller.getProductInfo)
 
 router
-  .route('/:product_id/styles')
+  .route('/products/:product_id/styles')
   .get(controller.getStyles)
 
 router
-  .route('/:product_id/related')
+  .route('/products/:product_id/related')
   .get(controller.getRelatedProducts)
 
   module.exports = router;

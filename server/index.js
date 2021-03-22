@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
@@ -14,6 +15,6 @@ server.use(bodyParser.json());
 server.use(cors());
 
 // server.use(express.static(path.join(__dirname, '../client/dist')));
-server.use('/products', router);
+server.use('/api', router);
 
 server.listen(port, () => console.log(`Listening on port ${port}`));

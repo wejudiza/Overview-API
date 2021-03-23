@@ -13,47 +13,7 @@ module.exports = {
     })
   },
   getStyles: (id, callback) => {
-    var queryStr =
-    `SELECT
-      s.product_id,
-      json_agg(
-        json_build_object(
-            'style_id', s.style_id,
-            'name', s.name,
-            'original_price', s.original_price,
-            'sale_price', s.sale_price,
-            'default?', s.default_style,
-            'photos', photos,
-            'skus', skus
-        )
-      ) results
-    FROM styles s
-    LEFT JOIN (
-      SELECT
-        skus.style_id,
-        json_object_agg(skus.id,
-          json_build_object(
-            'quantity', skus.quantity,
-            'size', skus.size
-          )
-        ) skus
-      FROM skus
-      GROUP BY skus.style_id
-    ) skus ON (s.style_id = skus.style_id)
-    LEFT JOIN (
-      SELECT
-        p.style_id,
-        json_agg(
-          json_build_object(
-            'thumbnail_url', p.thumbnail_url,
-            'url', p.url
-          )
-        ) photos
-      FROM photos p
-      GROUP BY p.style_id
-    ) p ON (s.style_id = p.style_id)
-    where s.product_id='${id}'
-    GROUP BY s.product_id;`;
+    var queryStr = `select * from styles_results where product_id ='${id}'`;
     pool.query(queryStr, (err, results) => {
       callback(err, results);
     })

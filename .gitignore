@@ -8,7 +8,7 @@ newrelic.js
 newrelic_agent.log
 
 #pem key
-products-API.pem
+atelier-products.pem
 
 #ubuntu login
 login.sh

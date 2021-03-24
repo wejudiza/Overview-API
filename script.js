@@ -13,17 +13,17 @@ export default function () {
   const responses = http.batch([
     [
       'GET',
-      `${url}/products/1`,
+      `${url}/products/`,
       null,
     ],
     [
       'GET',
-      `${url}/products/19284`,
+      `${url}/products/28`,
       null,
     ],
     [
       'GET',
-      `${url}/products/194284`,
+      `${url}/products/500000`,
       null,
     ],
     [
@@ -31,26 +31,36 @@ export default function () {
       `${url}/products/1000011`,
       null,
     ],
-    // [
-    //   'GET',
-    //   `${url}/products/1/styles`,
-    //   null,
-    // ],
-    // [
-    //   'GET',
-    //   `${url}/products/19284/styles`,
-    //   null,
-    // ],
-    // [
-    //   'GET',
-    //   `${url}/products/194284/styles`,
-    //   null,
-    // ],
-    // [
-    //   'GET',
-    //   `${url}/products/1000011/styles`,
-    //   null,
-    // ],
+    [
+      'GET',
+      `${url}/products/137/styles`,
+      null,
+    ],
+    [
+      'GET',
+      `${url}/products/692305/styles`,
+      null,
+    ],
+    [
+      'GET',
+      `${url}/products/999997/styles`,
+      null,
+    ],
+    [
+      'GET',
+      `${url}/products/5600/related`,
+      null,
+    ],
+    [
+      'GET',
+      `${url}/products/333000/related`,
+      null,
+    ],
+    [
+      'GET',
+      `${url}/products/893400/related`,
+      null,
+    ],
   ]);
 
   sleep(1);

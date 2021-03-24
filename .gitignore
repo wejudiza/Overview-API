@@ -9,6 +9,8 @@ newrelic_agent.log
 
 #pem key
 atelier-products.pem
+*.pem
 
 #ubuntu login
 login.sh
+*.sh

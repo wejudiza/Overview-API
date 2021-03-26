@@ -16,5 +16,8 @@ server.use(cors());
 
 // server.use(express.static(path.join(__dirname, '../client/dist')));
 server.use('/api', router);
+server.get('/loaderio-280b6d9a39cbc4e6489db27a2252ca50', (req, res) => {
+  res.send('loaderio-280b6d9a39cbc4e6489db27a2252ca50')
+})
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
